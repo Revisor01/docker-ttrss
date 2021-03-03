@@ -7,9 +7,9 @@ $confpath = env('TTRSS_PATH', '/var/www/ttrss');
 $conffile = $confpath . '/config.php';
 
 $ename = 'DB';
-$eport = 5432;
+$eport = 3306;
 
-$db_type = env('DB_TYPE','pgsql');
+$db_type = env('DB_TYPE','mysql');
 if ($db_type == 'mysql'){
     $eport = 3306;
 }
