@@ -30,6 +30,38 @@ update_plugin_feediron()
     ( cd ${TTRSS_PATH_PLUGINS}/feediron && git pull origin HEAD )
 }
 
+update_plugin_fever()
+{
+    echo "Updating: Fever"
+    ( cd ${TTRSS_PATH}/plugins/fever && git pull origin HEAD )
+}
+
+update_plugin_mercury_fulltext()
+{
+    echo "Updating: mercury_fulltext"
+    ( cd ${TTRSS_PATH_PLUGINS}/mercury_fulltext && git pull origin HEAD )
+}
+
+update_plugin_newsplus()
+{
+    echo "Updating: newsplus"
+    ( curl https://raw.githubusercontent.com/voidstern/tt-rss-newsplus-plugin/master/api_newsplus/init.php > ${TTRSS_PATH}/plugins/api_newsplus/init.php )
+}
+
+update_plugin_options()
+{
+    echo "Updating: options-per-feed"
+    ( cd ${TTRSS_PATH}/plugins/options_per_feed && git pull origin HEAD )
+}
+
+update_plugin_wallabag()
+{
+    echo "Updating: wallabag"
+    ( curl https://raw.githubusercontent.com/vishalg/ttrss-to-wallabag-v2/master/wallabag_v2/init.php > ${TTRSS_PATH_PLUGINS}/wallabag_v2/init.php )
+    ( curl https://raw.githubusercontent.com/vishalg/ttrss-to-wallabag-v2/master/wallabag_v2/wallabag.png > ${TTRSS_PATH_PLUGINS}/wallabag_v2/wallabag.png )
+    ( curl https://raw.githubusercontent.com/vishalg/ttrss-to-wallabag-v2/master/wallabag_v2/wallabag_v2.js > ${TTRSS_PATH_PLUGINS}/wallabag_v2/wallabag_v2.js )
+}
+
 update_themes()
 {
     echo "Updating: Themes"
@@ -72,6 +104,11 @@ update_common()
 update_ttrss
 update_plugin_mobilize
 update_plugin_feediron
+update_plugin_fever
+update_plugin_mercury_fulltext
+update_plugin_newsplus
+update_plugin_options
+update_plugin_wallabag
 update_themes
 update_common
 
