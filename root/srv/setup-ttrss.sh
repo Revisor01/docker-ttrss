@@ -70,6 +70,15 @@ setup_ttrss()
         mkdir -p ${TTRSS_PATH_PLUGINS}
         git clone --depth=1 https://github.com/sepich/tt-rss-mobilize.git ${TTRSS_PATH_PLUGINS}/mobilize
         git clone --depth=1 https://github.com/feediron/ttrss_plugin-feediron.git ${TTRSS_PATH_PLUGINS}/feediron
+        git clone --depth=1 https://github.com/HenryQW/tinytinyrss-fever-plugin.git ${TTRSS_PATH}/plugins/fever
+        git clone --depth=1 https://github.com/HenryQW/mercury_fulltext.git ${TTRSS_PATH_PLUGINS}/mercury_fulltext
+        mkdir ${TTRSS_PATH}/plugins/api_newsplus
+        curl https://raw.githubusercontent.com/voidstern/tt-rss-newsplus-plugin/master/api_newsplus/init.php > ${TTRSS_PATH}/plugins/api_newsplus/init.php
+        git clone --depth=1 https://github.com/sergey-dryabzhinsky/options_per_feed.git ${TTRSS_PATH}/plugins/options_per_feed
+        mkdir ${TTRSS_PATH_PLUGINS}/wallabag_v2
+        curl https://raw.githubusercontent.com/vishalg/ttrss-to-wallabag-v2/master/wallabag_v2/init.php > ${TTRSS_PATH_PLUGINS}/wallabag_v2/init.php
+        curl https://raw.githubusercontent.com/vishalg/ttrss-to-wallabag-v2/master/wallabag_v2/wallabag.png > ${TTRSS_PATH_PLUGINS}/wallabag_v2/wallabag.png
+        curl https://raw.githubusercontent.com/vishalg/ttrss-to-wallabag-v2/master/wallabag_v2/wallabag_v2.js > ${TTRSS_PATH_PLUGINS}/wallabag_v2/wallabag_v2.js
 
         mkdir -p ${TTRSS_PATH_THEMES}
         git clone --depth=1 https://github.com/levito/tt-rss-feedly-theme.git ${TTRSS_PATH_THEMES}/levito-feedly-git
